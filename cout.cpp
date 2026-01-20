@@ -5,5 +5,4 @@ int main(){
     int b=20;
     cout<<a<<"\n";
     cout<<b;
-    return 0;
-}
+    return 0;} 
