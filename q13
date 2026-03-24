@@ -1,0 +1,20 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main() {
+    float a,b,c,d,x1,x2;
+    cout<<"enter a ,b ,c: ";
+    cin>>a>>b>>c;
+       d=b*b-4*a*c;
+    if(d>0){
+        x1=(-b+sqrt(d))/(2*a);
+        x2=(-b-sqrt(d))/(2*a);
+        cout<<"eqn has distinct roots: "<<x1<<"and"<<x2;
+    }
+    else if(d==0){
+        x1=-b/(2*a);
+        cout<<"  eqn has equal roots: "<<x1;
+    }
+    else
+        cout<<"eqn has imaginary roots";
+}

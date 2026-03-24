@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+
+class Candy
+{
+    string color;
+    int points;
+
+public:
+
+    void setCandy(string c, int p)
+    {
+        color = c;
+        points = p;
+    }
+
+    void displayCandy()
+    {
+        cout << "color: " << color << endl;
+        cout << "points: " << points << endl;
+    }
+};
+
+int main()
+{
+    Candy c1, c2;
+
+    c1.setCandy("red", 50);
+    c2.setCandy("blue", 80);
+
+    c1.displayCandy();
+    cout << endl;
+    c2.displayCandy();
+
+    return 0;
+}

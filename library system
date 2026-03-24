@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+class Book{
+string title="";
+string author="";
+double price=0;
+public:
+void inputDetails()
+{ cout<<"enter book title : ";
+    cin>>title;
+    cout<<"enter author name : ";
+    cin>>author;
+    cout<<"enter price : ";
+    cin>>price;}
+void displayDetails()
+{cout<<"\n Book Title : "<<title;
+    cout<<"\n Author : "<<author;
+    cout<<"\n Price : "<<price<<"\n";}};
+int main(){
+Book b1;
+b1.inputDetails();
+b1.displayDetails();
+return 0;
+}

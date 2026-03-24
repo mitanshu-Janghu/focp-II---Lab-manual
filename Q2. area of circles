@@ -1,0 +1,8 @@
+#include <iostream>
+using namespace std;
+int main(){
+    float a;
+    cin>>a;
+    cout<<"area is :"<<3.14*a*a;
+    return 0;
+}

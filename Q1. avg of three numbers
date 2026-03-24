@@ -1,0 +1,8 @@
+#include <iostream>
+using namespace std;
+int main(){
+    float a,b,c;
+    cin>>a>>b>>c;
+    cout<<"avg is :"<<(a+b+c)/3.0;
+    return 0;
+}

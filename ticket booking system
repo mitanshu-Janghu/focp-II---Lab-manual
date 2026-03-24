@@ -1,0 +1,81 @@
+#include <iostream>
+using namespace std;
+
+class MovieTicket
+{
+    string movieName;
+    int seatNumber;
+    int ticketPrice;
+    bool isBooked;
+
+public:
+
+    MovieTicket()
+    {
+        movieName = "none";
+        seatNumber = 0;
+        ticketPrice = 200;
+        isBooked = false;
+    }
+
+    MovieTicket(string m, int s, int p)
+    {
+        movieName = m;
+        seatNumber = s;
+        ticketPrice = p;
+        isBooked = false;
+    }
+
+    void bookTicket()
+    {
+        if (!isBooked)
+        {
+            isBooked = true;
+            cout << "ticket booked\n";
+        }
+        else
+            cout << "already booked\n";
+    }
+
+    void cancelTicket()
+    {
+        if (isBooked)
+        {
+            isBooked = false;
+            cout << "ticket cancelled\n";
+        }
+        else
+            cout << "ticket not booked\n";
+    }
+
+    void displayTicketDetails()
+    {
+        cout << "movie: " << movieName << endl;
+        cout << "seat: " << seatNumber << endl;
+        cout << "price: " << ticketPrice << endl;
+        cout << "status: " << (isBooked ? "booked" : "not booked") << endl;
+    }
+
+    int calculateTotalCost(int numberOfTickets)
+    {
+        return ticketPrice * numberOfTickets;
+    }
+};
+
+int main()
+{
+    MovieTicket t1;
+    MovieTicket t2("avengers", 12, 300);
+
+    t1.displayTicketDetails();
+    t1.bookTicket();
+    t1.displayTicketDetails();
+
+    t2.bookTicket();
+    t2.cancelTicket();
+    t2.displayTicketDetails();
+
+    cout << "total cost: " << t2.calculateTotalCost(3) << endl;
+
+    return 0;
+}

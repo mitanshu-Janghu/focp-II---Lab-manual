@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+class Rectangle{
+
+float length;
+float width;
+public:
+void inputDimensions(){
+cout<<"\n Enter length : ";
+cin>>length;
+cout<<"\n Enter Width : ";
+cin>>width;
+}
+private:
+float calculateArea(){
+return length*width;
+}
+private:
+float calculatePerimeter(){
+return 2*(length+width);
+}
+public:
+void displayResult() {
+    cout<<"\n length : "<<length<<"\n Width : "<<width;
+    cout<<"\n Area of Rectangle : "<<calculateArea();
+    cout<<"\n Perimeter of Rectangle : "<<calculatePerimeter();
+}};
+
+int main(){
+    Rectangle r1;
+    r1.inputDimensions();
+    r1.displayResult();
+}

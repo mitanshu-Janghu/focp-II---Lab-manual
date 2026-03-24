@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+class T{
+float c=0;
+public:
+void inp(){
+    cout<<"enter c : ";
+    cin>>c;
+}
+float conv(){
+    float f;
+    f = (c*9/5)+32;
+    return f;
+}
+void dis(){
+    cout<<"\n c : "<<c;
+    cout<<"\n f : "<<conv()<<"\n";
+}
+};
+int main(){
+T t1;
+t1.inp();
+t1.dis();
+return 0;
+}

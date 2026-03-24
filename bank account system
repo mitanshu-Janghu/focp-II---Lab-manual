@@ -1,0 +1,47 @@
+#include <iostream>
+using namespace std;
+class BankAccount
+{
+	string accountHolderName;
+	int accountNumber;
+	double Balance ;
+public:
+void inputDetails(){
+cout<<"\n Enter Account Holder Nmae : ";
+cin>>accountHolderName;
+cout<<"\n Enter Account Number : ";
+cin>>accountNumber;
+cout<<"\n Enter Balance : ";
+cout<<Balance;
+}
+void deposit(double amount)
+{
+    Balance+=amount;
+	displayDetails();
+}
+void withdraw(double amount){
+	if(Balance-amount>0){
+    Balance-=amount;
+	displayDetails();}
+	else{
+		cout<<"Denied.... First earn then try to spent, you 'gareeb' never come to this bank ";
+	}
+}
+void displayDetails(){
+cout<<"\n Account Holder Nam : " <<accountHolderName;
+cout<<"\n Account Number : " << accountNumber;
+cout<<"\n Balance : " <<Balance;
+}
+};
+int main(){
+	BankAccount ac1;
+    ac1.inputDetails();
+    char choice;
+    cout<<"\n D for deposit and W for for withdrawal : ";
+    cin>>choice;
+    if(choice=='D')
+    ac1.deposit(5000);
+    else ac1.withdraw(12000);
+    ac1.displayDetails();
+    return 0;
+}
